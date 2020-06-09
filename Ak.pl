@@ -36,7 +36,7 @@ time_funct(_,[]):- !.
 time_funct(Writer,[H|_]):- asserta(time(Writer,H)),!.
 
 
-% Вопросы
+
 q1(Ans):-write('\n\'Автор - "наше все"?'),nl,write('0. Да.'),nl,write('1. Нет'),nl,read(Ans).
 q2(Ans):- write('\n\'Из какой страны этот писатель?'), nl, write('0.Англия.'), nl, write('1. Америка'),nl, write('2. Ирландия'),nl, write('3. Франция'),nl, write('4. Шотландия'),nl,write('5. Австрия'),nl,write('6. Германия'),nl,write('7. Россия'),nl,read(Ans).
 q3(Ans):- write('\n\nВ каком жанре (в какой форме) писал автор?'), nl, write('0. Научная фантастика.'), nl, write('1. Фантастика.'),nl,write('2. Роман.'),nl,write('3. Повесть.'),nl,write('4. Фантастика.'),nl,write('5. Стих.'),nl,write('6. Поэма.'),nl,write('7. Рассказ.'),nl,write('8. Готический роман.'),nl,write('9.Роман-эпопея.'),nl,write('10. Детектив.'),nl,write('11. Антиутопия.'),nl,read(Ans).
