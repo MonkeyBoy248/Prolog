@@ -69,25 +69,6 @@ checkBreak0:-break(X),!,X=0.
 add_Writer(1, List):-write('Введите имя писателя -- '), read_str(Name), name(Writer, Name), add_Writer_to_DB(Writer, List), !.
 add_Writer(0,_):- !.
 
-% user_answer(0,_,_,_,_,_,_):- clear_DB, !.
-% user_answer(1,_,_,_,_,_,_):-!.
-%
-% user_answer(-1,Ans1,Ans2,Ans3,Ans4,Ans5):-!.
-
-% clear_DB:-
-% delete_origin,delete_class,delete_cost,delete_isFullAuto,delete_recoil.
-% Очистка базы данных
-
-% delete_origin:- repeat,(origin(X,Y) -> retract(origin(X,Y)),
-% fail;X=nil,Y=nil, !).
-% delete_class:- repeat,(class(X,Y) -> retract(class(X,Y)),
-% fail;X=nil,Y=nil, !).
-% delete_cost:- repeat,(cost(X,Y) -> retract(cost(X,Y)),
-% fail;X=nil,Y=nil, !).
-% delete_isFullAuto:- repeat,(isFullAuto(X,Y) ->
-% retract(isFullAuto(X,Y)), fail;X=nil,Y=nil, !).
-% delete_recoil:- repeat,(recoil(X,Y) -> retract(recoil(X,Y)),
-% fail;X=nil,Y=nil, !).
 add_Writer_to_DB(CharName, List):- append('iz7.txt'), nl, write(CharName), nl, write_list(List), told.
 
 
